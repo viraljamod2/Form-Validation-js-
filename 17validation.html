@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            height: 500px;
+            background-color: darkcyan;
+        }
+        .conteiner{
+            width: 500px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 20px;
+            color: red;
+        }
+        form{
+         /* padding: 400px 0; */
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="conteiner">
+            <form action="" onsubmit="return validationForm()">
+                <label for="username" >enter your username</label> <br>
+                <input type="text" id="username" > 
+                <p id="usererror"></p>
+                <label for="password">enter your password</label>  <br>
+                <input type="password" name="" id="password"> <br>
+                <p id="passerror"></p>
+                <input type="submit" >
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // function first_fuction(x,y) {
+        //     return x+x+y/2-5
+        // }
+
+        // let a = 50
+        // let b = 78
+        // let c = 56
+
+        // console.log(first_fuction(a,c));
+
+        let username = document.getElementById("username")
+        let password = document.getElementById("password")
+
+        
+
+        function validationForm(){
+            
+            if(username.value == ""){
+               
+                document.getElementById("usererror").innerHTML = "error"
+              
+            }
+            
+            else if (username.value.length < 5){
+                document.getElementById("usererror").innerHTML = "mex 5 cher"
+
+            }
+            else{
+                document.getElementById("usererror").innerHTML = ""
+
+            }
+            
+            return false
+        }
+    </script>
+    
+</body>
+</html>
